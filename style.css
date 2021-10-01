@@ -1,0 +1,72 @@
+section.content {
+    padding: 150px 0;
+}
+section.welcome { 
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+.card-product span.small {
+    font-size: 10px;
+}
+.pic-user-review {
+    height: 45px;
+    width: 45px;    
+}
+
+.closing-st-newsletter {
+    background-color: var(--color-primary-lighter);
+    border-top-right-radius: 80px;
+    padding: 60px 0;
+}
+
+section.whyus::before {
+    background-image: url('img/pernik-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 70%;
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    background-position: right;
+}
+
+.newsletter-email {
+    width: 350px;
+    position:absolute;
+    bottom: -20%;
+    right: 15%;
+}
+.newsletter-email input[type="email"] {
+    padding-right: 60px;        
+}
+.newsletter-email .btn-submit {
+    top: 3px;
+    right: 5px;
+}
+
+.pernik-1 {
+    background-image: url('img/pernik.png');
+    background-position: left top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: '';
+    width: 100%;
+    height: 90%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 991px) {
+    section.welcome {
+        padding-top: 150px;
+        padding-bottom: 0px;
+    }
+    section.welcome img.w-100 {
+        margin-top: 25px;
+    }
+}

@@ -1,0 +1,272 @@
+@font-face{
+    font-family:Butler EB;
+    src:url(https://mundgn-static.nos.jkt-1.neo.id/assets/css/fonts/Butler-ExtraBold.woff);
+    font-weight: 800;
+}
+:root {
+    --color-primary: #971B2F;
+    --color-primary-dark: #8b182b;
+    --color-primary-lighter: #FFF0F2;
+    --color-darker: #31353B;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-darker);
+}
+li { list-style:none; }
+a { color: var(--color-primary); text-decoration: none; }
+a:hover { color: var(--color-primary-dark); }
+
+/* Font */
+.butler-eb {
+    font-family: 'Butler EB', serif;
+}
+.fw-600 {
+    font-weight: 600;
+}
+
+/* Text */
+.text-primary { color: var(--color-primary) !important; }
+.lts-3 { letter-spacing: 3px; }
+
+/* Navbar */
+nav.mu-navbar {
+    padding: 0 1%;
+    transition: top 0.2s ease-in-out;
+    z-index: 9999;
+}
+nav.mu-navbar .dropdown-toggle::after {    
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";  
+    border: none !important;  
+    vertical-align: 0px !important; 
+}
+nav.mu-navbar .dropdown-toggle.show::after {    
+    content: "\f106";
+    font-family: "Font Awesome 5 Free";  
+    border: none !important;  
+}
+nav ul {
+    margin: 0;
+}
+nav li a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-darker);
+    padding: 0.5em 0.75em;
+}
+nav li a:hover {
+    color: var(--color-primary);
+}
+nav .dropdown-menu {
+    border-radius: 15px;
+    min-width: 200px;
+    border: none !important;
+    box-shadow: 0 1px 6px 0 rgba(49, 53, 59, .12);
+}
+nav .dropdown-menu > li > a {
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.2s ease-out;
+}
+nav .dropdown-menu > li > a:hover {
+    background-color: #E0E6EC;
+    transition: all 0.2s ease-in;
+}
+.navbar-up {
+    top: -90px;
+}
+nav.mu-navbar .btn-expand {
+    display: none;
+}
+nav.mu-navbar .menu-mobile {
+    display: none;
+}
+/* Button */
+.btn {
+    box-shadow: none !important;
+}
+.btn.rounded-pill {
+    padding: 8px 25px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.btn-gradient {
+    background: rgb(151,27,47);
+    background: linear-gradient(90deg, rgba(151,27,47,1) 0%, rgba(204,59,82,1) 100%);
+    color: #fff;    
+}
+.btn-gradient:hover {    
+    color: #fff;
+}
+
+/* Card */
+.card,
+.card .product-cover {
+    border-radius: 15px;
+}
+.card .product-cover {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.card-link { color: var(--color-darker); }
+.card-link:hover { color: var(--color-darker); }
+
+/* Overlay */
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+}
+
+/* Form Control */
+.form-control {
+    box-shadow: none !important;    
+}
+.form-control:active,
+.form-control:focus,
+.form-check-input:focus,
+.form-select:focus {
+    border-color: var(--color-primary);
+}
+.form-check-input:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+.resize-none { resize: none; }
+/* Custom Checkbox */
+.mu-check {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.mu-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #777;
+    border-radius: 4px;
+}
+.mu-check input:checked~.checkmark {
+    background-color: #971B2F;
+    border-color: #971B2F;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.mu-check input:checked~.checkmark:after {
+    display: block;
+}
+.mu-check .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Footer */
+footer ul {
+    padding-left: 0;
+}
+footer a {
+    color: var(--color-darker);
+}
+footer ul > li {
+    margin-bottom: 10px;
+}
+footer a:hover {
+    color: var(--color-darker);
+    text-decoration: underline;
+}
+footer .payment-method > img {
+    margin: 8px;
+}
+@media screen and (min-width: 1081px) {
+    nav.mu-navbar .menu-mobile {
+        display: none !important;
+    }
+}
+@media screen and (max-width:1080px) {
+    nav.mu-navbar.active-mobile {
+        top: 0 !important;
+    }
+    nav.mu-navbar .menu-navbar {
+        display: none !important;
+    }
+    nav.mu-navbar .btn-expand {
+        display: block !important;
+    }    
+    nav.mu-navbar .menu-mobile {            
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 999;
+    }
+    nav.mu-navbar .menu-mobile li:not(.nav-brand) {
+        margin-bottom: 15px;
+    }
+    nav.mu-navbar .menu-mobile > ul {
+        padding: 30px 50px !important;
+    }
+    nav.mu-navbar .menu-mobile li:not(.nav-brand) > a {
+        padding: 10px 24px;
+        display: block;
+        width: 100%;
+        border-radius: 15px;
+        transition: all 0.2s ease-out;
+    }
+    nav.mu-navbar .menu-mobile li:not(.nav-brand) > a:hover {
+        padding: 10px 24px;
+        background-color: #E0E6EC;
+        transition: all 0.2s ease-in;
+    }
+    nav.mu-navbar .menu-mobile li.dropdown ul > li {
+        margin-bottom: 0;
+    }
+    nav.mu-navbar .menu-mobile li.dropdown ul {
+        padding-left: 15px;
+    }
+    nav.mu-navbar .menu-mobile .dropdown-menu {
+        position: relative !important;
+        transform: translate(0px, 8px) !important;
+        box-shadow: none !important;
+    }
+    nav.mu-navbar .menu-mobile .dropdown-menu a {
+        border-radius: 15px;
+    }
+    nav.mu-navbar .menu-mobile .dropdown-menu a:hover {
+        border-radius: 15px;
+    }
+}

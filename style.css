@@ -60,7 +60,11 @@ section.whyus::before {
     top: 0;
     left: 0;
 }
-
+/* About */
+.img-team {
+    border-radius: 15px;
+    object-fit:cover;
+}
 @media screen and (max-width: 991px) {
     section.welcome {
         padding-top: 150px;
